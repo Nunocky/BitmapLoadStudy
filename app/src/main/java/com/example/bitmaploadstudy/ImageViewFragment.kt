@@ -122,8 +122,11 @@ fun Uri.getBitmapOrNull(contentResolver: ContentResolver): Bitmap? {
     }.getOrNull()
 }
 
-
-fun calculateInSampleSize(options: BitmapFactory.Options, reqWidth: Int, reqHeight: Int): Int {
+private fun calculateInSampleSize(
+    options: BitmapFactory.Options,
+    reqWidth: Int,
+    reqHeight: Int
+): Int {
     // Raw height and width of image
     val (height: Int, width: Int) = options.run { outHeight to outWidth }
     var inSampleSize = 1
