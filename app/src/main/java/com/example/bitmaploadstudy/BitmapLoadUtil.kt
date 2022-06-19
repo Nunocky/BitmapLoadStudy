@@ -36,7 +36,6 @@ fun Uri.getBitmapOrNull(contentResolver: ContentResolver): Bitmap? {
             }
         } else {
             var iStream = contentResolver.openInputStream(this)
-            iStream?.mark(0)
             val options = BitmapFactory.Options().apply {
                 inJustDecodeBounds = true
             }
