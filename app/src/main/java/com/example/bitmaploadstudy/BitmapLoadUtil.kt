@@ -47,7 +47,6 @@ fun Uri.getBitmapOrNull(contentResolver: ContentResolver): Bitmap? {
             val imageWidth = options.outWidth.toFloat()
             val imageHeight = options.outHeight.toFloat()
             //val imageType: String = options.outMimeType
-            //Log.d("safd", "${imageWidth}, ${imageHeight}")
 
             if (MAX_IMAGE_EDGE_LENGTH < imageWidth ||
                 MAX_IMAGE_EDGE_LENGTH < imageHeight
